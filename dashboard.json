@@ -1,0 +1,25 @@
+{
+  "widgets": [
+    {
+      "type": "metric", "x": 0, "y": 0, "width": 12, "height": 6,
+      "properties": {
+        "title": "EC2 CPU Utilization",
+        "region": "ap-south-1", "view": "timeSeries", "stat": "Average", "period": 60,
+        "metrics": [
+          ["AWS/EC2", "CPUUtilization", "InstanceId", "i-02b63f84ff5ebfd43"],
+          ["AWS/EC2", "CPUUtilization", "InstanceId", "i-01b9b01591c951015"]
+        ]
+      }
+    },
+    {
+      "type": "metric", "x": 12, "y": 0, "width": 12, "height": 6,
+      "properties": {
+        "title": "ALB Request Count",
+        "region": "ap-south-1", "view": "timeSeries", "stat": "Sum", "period": 60,
+        "metrics": [
+          ["AWS/ApplicationELB", "RequestCount", "LoadBalancer", "app/project20-alb-v2/1b5fce7d5581873d"]
+        ]
+      }
+    }
+  ]
+}
